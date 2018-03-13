@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple tab form</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div class="page-content">
+    <div class="content-head">
+        <div class="breadcrumbs">
+            <a href=#>Main page</a>
+            <span class="nav-step">></span>
+            <a href=#>Loan, credit card</a>
+            <span class="nav-step">></span>
+            <a href=#>Small loan</a>
+            <span class="nav-step">></span>
+            <span>Small loan application</span>
+        </div>
+        <h1>Small loan application</h1>
+    </div>
+    <form action="javascript:void(0)" autocomplete="off" method="post" class="page-content" id="main-form">
+        <section class="form">
+            <ol class="form-steps">
+                <li class="step">
+                    <a href="#">Start</a>
+                </li>
+                <li class="step">
+                    <a href="#">Application</a>
+                    <ins class="step-line" style="width:80px"></ins>
+                </li>
+                <li class="step">
+                    <a href="#">Contact</a>
+                    <ins class="step-line" style="width:80px"></ins>
+                </li>
+                <li class="step">
+                    <a href="#">Obligations</a>
+                    <ins class="step-line" style="width:80px"></ins>
+                </li>
+                <li class="step">
+                    <a href="#">Income</a>
+                    <ins class="step-line" style="width:80px"></ins>
+                </li>
+                <li class="step">
+                    <a href="#">Approve</a>
+                    <ins class="step-line" style="width:74px"></ins>
+                </li>
+                <li class="step">
+                    <a href="#">Overview</a>
+                    <ins class="step-line" style="width:75px"></ins>
+                </li>
+            </ol>
+            <div class="form-content">
+                <div class="tab">
+                    <h3 class="form-header">Small loan application page</h3>
+                    <p>Please, press 'Apply' and fill all the fields of the form.</p>
+                </div>
+                <div class="tab">
+                    <h3 class="form-header">Set the limit of the loan</h3>
+                    <ul class="list">
+                        <li>
+                            <span class="cell label">Limit <span class="red">*</span>
+                                <span class="help"></span><span
+                                        class="tooltip">Choose the limit of the loan.</span></span>
+                            <div class="cell">
+                                <select class="form-field form-field-narrow" name="limit" id="limit">
+                                    <option value=""></option>
+                                    <option value="500">500</option>
+                                    <option value="1000">1000</option>
+                                    <option value="1500">1500</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2500">2500</option>
+                                    <option value="3000">3000</option>
+                                </select>
+                                <span id="error" class="error"> This field is required.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab">
+                    <h3 class="form-header">Select preferred contact form</h3>
+                    <ul class="list">
+                        <li>
+                            <span class="cell label">Form of contact <span class="red">*</span></span>
+                            <div class="cell">
+                                <input class="form-field radio" type="radio" name="contact" value="email">
+                                <span class="index">E-mail</span>
+                                <input class="form-field radio" type="radio" name="contact" value="phone">
+                                <span class="index">Phone</span>
+                                <span class="error"> This field is required.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab">
+                    <h3 class="form-header">Describe Your current financial obligations.</h3>
+                    <ul class="list">
+                        <li>
+                            <span class="cell label">Total monthly obligations <span class="red">*</span></span>
+                            <textarea class="cell form-field" name="monthly-obligations" rows="5" cols="20"></textarea>
+                            <span class="error"> This field is required.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab">
+                    <h3 class="form-header">Enter Your monthly income.</h3>
+                    <ul class="list">
+                        <li>
+                            <span class="cell label">Monthly income <span class="red">*</span></span>
+                            <input class="cell form-field" type="text" name="salary">
+                            <span class="error"> This field is required.</span>
+                            <span class="error-number"> Digital value required.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab">
+                    <h3 class="form-header">Confirm Your information</h3>
+                    <ul class="list">
+                        <li>
+                            <span class="cell label">I certify that all information given in this application is complete and correct<span
+                                    class="red">*</span></span>
+
+                            <input class="cell form-field checkbox" type="checkbox" name="approve">
+                            <span class="error"> This field is required.</span>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab">
+                    <h3 class="form-header">Summary</h3>
+                    <ul class="list" id="result-list">
+                        <li>
+                            <span class="cell label">Limit of the loan:</span>
+                            <div class="cell">
+                                <span class="field-value"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="cell label">Form of contact:</span>
+                            <div class="cell">
+                                <span class="field-value"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="cell label">Form of contact:</span>
+                            <div class="cell">
+                                <span class="field-value"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="cell label">Financial obligations:</span>
+                            <div class="cell">
+                                <span class="field-value"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="cell label">Monthly income:</span>
+                            <div class="cell">
+                                <span class="field-value"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="cell label">Confirmation:</span>
+                            <div class="cell">
+                                <span class="field-value"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form-button-bar">
+                <a class="back" id="back" type="button" onclick="nextPrev(-1)">Back</a>
+                <a class="next" id="next" type="button" onclick="nextPrev(1)"></a>
+            </div>
+        </section>
+    </form>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
